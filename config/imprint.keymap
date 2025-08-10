@@ -25,14 +25,14 @@
 
         Secondary_Layer {
             bindings = <
-&trans        &trans                    &trans                &trans                &trans       &trans                  &trans         &trans          &trans         &trans           &trans         &trans
-&trans        &trans                    &trans                &trans                &trans       &trans                  &trans         &trans          &trans         &trans           &trans         &trans
-&trans        &kp CARET                 &kp POUND             &kp AT                &kp PERCENT  &kp PLUS                &kp AMPERSAND  &kp DOLLAR      &kp STAR       &kp EXCLAMATION  &kp EQUAL      &trans
-&trans        &kp N1                    &kp N2                &kp N3                &kp N4       &kp NUMBER_5            &kp NUMBER_6   &kp N7          &kp N8         &kp N9           &kp N0         &trans
-&trans        &kp LS(NON_US_BACKSLASH)  &kp TILDE             &kp BACKSLASH         &kp MINUS    &kp UNDER               &kp TILDE2     &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW     &kp RIGHT      &trans
-&bt BT_SEL 0  &bt BT_SEL 1              &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_DEC  &trans                                              &trans          &kp RG(MINUS)  &kp LG(PLUS)     &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC
-                                                                                    &trans       &trans        &trans    &trans         &trans          &trans
-                                                                                    &trans       &trans        &trans    &trans         &trans          &trans
+&trans        &trans        &trans                &trans                &trans     &trans                  &trans        &trans          &trans             &trans           &trans         &trans
+&trans        &trans        &trans                &trans                &trans     &trans                  &trans        &trans          &trans             &trans           &trans         &trans
+&trans        &kp EXCL      &kp CARET             &kp AT                &kp HASH   &kp PLUS                &kp PERCENT   &kp AMPS        &kp STAR           &kp DOLLAR       &kp EQUAL      &trans
+&trans        &kp N1        &kp N2                &kp N3                &kp N4     &kp NUMBER_5            &kp NUMBER_6  &kp N7          &kp N8             &kp N9           &kp N0         &trans
+&trans        &kp TILDE     &kp GRAVE             &kp BACKSLASH         &kp MINUS  &kp UNDER               &kp TILDE2    &kp LEFT_ARROW  &kp DOWN           &kp UP_ARROW     &kp RIGHT      &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans                                           &trans          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LG(MINUS)  &kp LG(PLUS)
+                                                                        &trans     &trans        &trans    &trans        &trans          &trans
+                                                                        &trans     &trans        &trans    &trans        &trans          &trans
             >;
         };
     };
@@ -48,10 +48,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,
         <&zip_xy_scaler 1 3>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
